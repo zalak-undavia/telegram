@@ -146,7 +146,7 @@ function Chat() {
 
             return chatsSoFar;
           }
-          if (previousDate == localDate) {
+          if (previousDate === localDate) {
             chatsSoFar.push(currentChat);
 
             return chatsSoFar;
@@ -253,6 +253,7 @@ function Chat() {
               </div>
             );
           }
+          return undefined;
         })}
       </div>
       <div className="chat-input-section">
