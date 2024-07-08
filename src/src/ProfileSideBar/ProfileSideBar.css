@@ -1,0 +1,106 @@
+.sidebar-container--absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 500px;
+  z-index: 1;
+  display: flex;
+}
+
+.sidebar-container--absolute.closed {
+  transform: translateX(-500px);
+}
+
+.sidebar-container--absolute.visible {
+  animation: slide-in forwards 0.4s ease-in;
+}
+
+.sidebar-container--absolute.closing {
+  animation: slide-back forwards 0.4s ease-in;
+}
+
+.sidebar {
+  height: 100%;
+  color: white;
+  width: 400px;
+  background-color: #1c242f;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-back {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+.sidebar-top {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 40px 15px;
+  background-color: #233040;
+}
+
+.side-bar-accordion {
+  background-color: #233040;
+}
+
+.sidebar-bottom {
+  background-color: #1c242f;
+}
+.avtar-icon-telegram {
+  padding: 10px;
+  background-color: #559cde;
+}
+
+.light-mode-icon {
+  color: white;
+}
+
+.sidebar-section {
+  height: 50px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.side-bar-icon {
+  height: 30px;
+  margin-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.side-bar-name {
+  /* border: 1px solid black; */
+  flex: 1;
+  padding-left: 30px;
+}
+
+.profile {
+  border-bottom: 1px solid black;
+}
+
+.add-account {
+  padding-left: 30px;
+  display: inline-block;
+}
+
+.backdrop {
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color;
+  transition-delay: 0.5ms;
+}

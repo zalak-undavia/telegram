@@ -1,0 +1,131 @@
+.msg {
+  color: white;
+  z-index: 1;
+}
+
+.bubble {
+  --r: 1em; /* the radius */
+  --t: 1.5em; /* the size of the tail */
+
+  width: 250px;
+  padding: 1em;
+  border-inline: var(--t) solid #0000;
+  border-radius: calc(var(--r) + var(--t)) / var(--r);
+  mask: radial-gradient(100% 100% at var(--_p) 0, #0000 99%, #000 102%)
+      var(--_p) 100% / var(--t) var(--t) no-repeat,
+    linear-gradient(#000 0 0) padding-box;
+  color: #fff;
+  background: #232d3a;
+  margin-bottom: 8px;
+}
+
+.left {
+  --_p: 0;
+  border-bottom-left-radius: 0 0;
+}
+
+.right {
+  --_p: 100%;
+  border-bottom-right-radius: 0 0;
+  position: relative;
+  right: -155px;
+}
+
+.chat-section {
+  margin-top: 8px;
+  position: relative;
+  height: calc(100vh - 112px);
+  overflow-y: scroll;
+  scrollbar-width: 0px;
+}
+
+.chat-section::-webkit-scrollbar {
+  width: 0px;
+}
+
+.chat-bg {
+  position: absolute;
+
+  left: 0;
+  width: 500px;
+
+  height: calc(100vh - 112px);
+  background: url("bgImg.png") no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.4;
+}
+
+.chat-input-bottom {
+  flex: 1;
+  background-color: #212d3b !important;
+}
+
+.file-icon {
+  transform: rotate(230deg);
+  color: #667383;
+}
+
+.text-color {
+  color: #667383 !important;
+}
+
+.name-in-chat-header {
+  margin-right: 10px;
+}
+
+.name-time-chat-header {
+  border: 1px solid red;
+}
+
+.chat-section-name-time {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.header-chat-time {
+  font-size: 14px;
+}
+
+.header-chat-name {
+  font-size: 18px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0;
+}
+
+.date {
+  background: #232d3a;
+  border-radius: 16px;
+  padding: 8px;
+  color: #fff;
+}
+
+.date-pill-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  z-index: 2;
+}
+
+.date-pill {
+  background: #232d3a;
+  border-radius: 16px;
+  padding: 8px;
+  color: #fff;
+  box-shadow: 2px 2px 8px black;
+  opacity: 0.8;
+}
+
+.sender {
+  margin-top: -8px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
