@@ -2,6 +2,31 @@
 
 https://telegram-ui-clone.web.app/
 
+# Description
+
+This app is created using CRA
+Highlights of the things achieved:
+
+- Profile Sidebar animation
+- Date Pill (visible on scroll)
+- Static Date Pill
+- All, Personal and Group chat tabs
+- Fetching the last message to display while on the chat-list page
+
+Things remaining:
+
+- Light Dark Toggle
+
+# Issues
+
+Because there are a lot of API calls to fetch the last message for each chat,
+sometimes the API returns 429 error message.
+Because of that, the UI will not be visible.
+If you encounter that, try the app after some time.
+
+This would have been solved if get_all_chats API returned the last message
+along with the list of chats.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
